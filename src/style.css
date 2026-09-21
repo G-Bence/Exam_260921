@@ -11,7 +11,8 @@ body{
 }
 
 #mainContainer{
-    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     min-height: 60vh;
     background-color: rgb(255 255 255 / 0.2);
     backdrop-filter: blur(10px);
@@ -20,9 +21,56 @@ body{
     box-shadow: 0px 0px 25px rgb(0 0 0 / 0.3);
 }
 
+#tableContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 25px;
+    padding-bottom: 0;
+    scrollbar-width: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+#mainTable{
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    border: 2.5px rgb(255 255 255 / 0.3) solid;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgb(0 0 0 / 0.3);
+    table-layout: fixed;
+    min-width: 650px;
+}
+
+#thead *th{
+    width: 100%;
+}
+
+
 .cold{
     background-color: aqua !important;
 }
 .warm{
     background-color: tomato !important;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+#tableContainer{
+    padding: 5px;
+    padding-top: 25px;
+    padding-bottom: 0;
+}
 }
